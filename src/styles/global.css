@@ -1,13 +1,19 @@
 /* Global styles */
 :root {
-  --background: #1e1e2e;
-  --background-light: #fcebf3;
-  --button: #78c2ad;
-  --text: #eff1f5;
-  --text-light: #1e1e2e;
-  --text-link: #78c2ad;
-  --text-link-light: #375a7f;
-  --underline: #375a7f;
+  /* Light mode */
+  --background-light: #f9f9f9;
+  --text-light: #2a2b2a;
+  --text-link-light: #1b9aaa;
+
+  /* Dark mode */
+  --background: #2a2b2a;
+  --text: #f9f9f9;
+  --text-link: #1b9aaa;
+
+  /* Accents */
+  --button: #ff9f1c;
+  --underline: #8cb369;
+
   --header: 'Kode Mono', monospace;
   --body: 'IBM Plex Sans', sans-serif;
 }
@@ -100,7 +106,7 @@ li {
 
 /* Badge */
 .badge {
-  background-color: #584966;
+  background-color: color-mix(in hsl, var(--underline), black 20%);
   color: var(--text);
   border-radius: 6px;
   font-family: var(--body);
