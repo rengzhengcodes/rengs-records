@@ -8,8 +8,8 @@
   --text-link: #78c2ad;
   --text-link-light: #375a7f;
   --underline: #375a7f;
-  --header: 'Kode Mono', cursive;
-  --body: 'Exo 2', sans-serif;
+  --header: 'Kode Mono', monospace;
+  --body: 'IBM Plex Sans', sans-serif;
 }
 
 html {
