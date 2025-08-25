@@ -344,6 +344,27 @@ html.light {
   content: url("/images/li-in.png");
 }
 
+main a {
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+
+main a:link {
+  color: var(--text-link);
+}
+main a:visited {
+  color: var(--text-link);
+}
+
+.light main a:link {
+  color: var(--text-link-light);
+}
+.light main a:visited {
+  color: var(--text-link-light);
+}
+
 .light .badge__link {
   color: var(--text-link-light);
 }
