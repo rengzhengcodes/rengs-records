@@ -286,7 +286,7 @@ footer {
 }
 
 .lost__body {
-  color: #5C5B77;
+  color: var(--text);
 }
 
 .lost__link {
