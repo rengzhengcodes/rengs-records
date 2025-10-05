@@ -8,4 +8,7 @@ export default defineConfig({
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
     },
+    // Custom domain handler.
+    site: 'https://icarus.diy',
+    base: '/',
 });
