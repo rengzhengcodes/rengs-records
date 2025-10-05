@@ -19,3 +19,15 @@ main a:visited {
 .light main a:visited {
   color: var(--text-link-light);
 }
+
+strong {
+  font-weight: 1100;
+  color: color-mix(in srgb, var(--text), white 25%)
+}
+.light strong {
+  color: color-mix(in srgb, var(--text-light),black 25%)
+}
+
+.caption {
+  font-size: 1em;
+}

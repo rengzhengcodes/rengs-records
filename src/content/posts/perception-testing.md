@@ -3,11 +3,19 @@ title: 'Perception Testing: My Thoughts on What Goes into a Testing Trip'
 author: Reng Zheng
 date: '10-03-2025'
 image:
-    url: 'https://s3.amazonaws.com/cms.ipressroom.com/219/files/20252/202503180805/quantum-computing.jpg'
-    alt: 'Boston Q-Compute HPC Press Release Photo'
+   url: '/fsae/perception/my25_right.png'
+   alt: 'Boston Q-Compute HPC Press Release Photo'
 ---
 # Background
 Bootstrapping an Autonomous Vehicle's Perception team is a hard task. For AMY25 at [MIT Motorsports](fsae.mit.edu) this means thinking about how you are going to collect training data after you've got your [sensors in order](./posts/network-syncing), with PTP (IEEE-1588) time-syncing.
+
+<div class="center">
+   <video class="pro-img" controls preload="metadata" playsinline style="width:100%; height:auto;">
+      <source src="/fsae/perception/testing_trip.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+   </video>
+   <p class="caption">Video of MY25 being tested. See more at <a href="https://fsae.mit.edu">fsae.mit.edu</a>.</p>
+</div>
 
 # What is a testing trip? What does it mean for Perception?
 The philosophy of a testing trip is that you have some empirical unknown about the car that can only be [pragmatically] acquired by experimentation and data collection. For perception, this is determined by our project scope: accurate 3D reconstruction of objects in space. Therefore, there are 3 categories our testing trips can fall into:
@@ -77,7 +85,7 @@ Now that we have established the high-level requirements of our testing trip, an
    1. Make sure you have ground truths. If not, recollect them.
    2. Make sure data collected is saved.
    3. Turn off the Orin after data is saved and the sensors.
-      1. Data -> sensors in that order.
+      1. Data $$\to$$ sensors in that order.
    4. Disconnect power from the Orin and sensors.
    5. Pick up cones.
    6. Pack vehicle.
@@ -143,7 +151,7 @@ This yields the following modification, where bolded elements represent items th
    1. Make sure you have ground truths. If not, recollect them.
    2. Make sure data collected is saved.
    3. Turn off the Orin after data is saved and the sensors.
-      1. Data -> sensors in that order.
+      1. Data $$\to$$ sensors in that order.
    4. Disconnect power from the Orin and sensors.
    5. Pick up cones.
    6. Pack vehicle.
@@ -211,7 +219,7 @@ With the live-demo done, you can now be reasonably assured that your perception 
    1. Make sure you have ground truths. If not, recollect them.
    2. Make sure data collected is saved.
    3. Turn off the Orin after data is saved and the sensors.
-      1. Data -> sensors in that order.
+      1. Data $$\to$$ sensors in that order.
    4. Disconnect power from the Orin and sensors.
    5. Pick up cones.
    6. Pack vehicle.
