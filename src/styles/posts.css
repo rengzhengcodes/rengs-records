@@ -1,0 +1,33 @@
+/* Link changes from default for posts. */
+main a {
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+
+main a:link {
+  color: var(--text-link);
+}
+main a:visited {
+  color: var(--text-link);
+}
+
+.light main a:link {
+  color: var(--text-link-light);
+}
+.light main a:visited {
+  color: var(--text-link-light);
+}
+
+strong {
+  font-weight: 1100;
+  color: color-mix(in srgb, var(--text), white 25%)
+}
+.light strong {
+  color: color-mix(in srgb, var(--text-light),black 25%)
+}
+
+.caption {
+  font-size: 1em;
+}
