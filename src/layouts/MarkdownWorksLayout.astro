@@ -1,7 +1,14 @@
 ---
 import BaseLayout from './Layout.astro';
 import '../styles/posts.css';
+
 const { frontmatter } = Astro.props;
+
+// Safely read up to 3 images from frontmatter.workImages (or [])
+const images =
+  Array.isArray(frontmatter?.workImages)
+    ? frontmatter.workImages.slice(0, 3)
+    : [];
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <div class="gif">
@@ -15,9 +22,9 @@ const { frontmatter } = Astro.props;
         <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
         <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
     </ul>
+
     <div class="center">
-        <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
-        <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
+        <img class="pro-img" width="500px" height="281" src={images[0].url} alt={images[0].alt} />
     </div>
 </BaseLayout>
 

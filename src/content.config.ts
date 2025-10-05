@@ -1,23 +1,18 @@
 import { z, defineCollection } from "astro:content";
 import { glob } from 'astro/loaders';
 
+const imageObj = z.object({
+  url: z.string(),
+  alt: z.string(),
+});
+
 const projectsCollection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/projects" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string()
-    }),
-    worksImage1: z.object({
-      url: z.string(),
-      alt: z.string()
-    }),
-    worksImage2: z.object({
-      url: z.string(),
-      alt: z.string()
-    }),
+    image: imageObj,
+    workImages: z.array(imageObj),
     platform: z.string(),
     stack: z.string(),
     website: z.string(),
