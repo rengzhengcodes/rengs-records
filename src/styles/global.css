@@ -1,15 +1,21 @@
 /* Global styles */
 :root {
-  --background: #1e1e2e;
-  --background-light: #fcebf3;
-  --button: #78c2ad;
-  --text: #eff1f5;
-  --text-light: #1e1e2e;
-  --text-link: #78c2ad;
-  --text-link-light: #375a7f;
-  --underline: #375a7f;
-  --header: 'Pacifico', cursive;
-  --body: 'Josefin Sans', sans-serif;
+  /* Light mode */
+  --background-light: #f9f9f9;
+  --text-light: #2a2b2a;
+  --text-link-light: #1b9aaa;
+
+  /* Dark mode */
+  --background: #2a2b2a;
+  --text: #f9f9f9;
+  --text-link: #1b9aaa;
+
+  /* Accents */
+  --button: #ff9f1c;
+  --underline: #8cb369;
+
+  --header: 'Kode Mono', monospace;
+  --body: 'IBM Plex Sans', sans-serif;
 }
 
 html {
@@ -100,7 +106,7 @@ li {
 
 /* Badge */
 .badge {
-  background-color: #584966;
+  background-color: color-mix(in hsl, var(--underline), black 15%);
   color: var(--text);
   border-radius: 6px;
   font-family: var(--body);
@@ -254,15 +260,15 @@ footer {
 }
 
 .git-icon {
-  content: url("/.netlify/images?url=/images/github-mark-white.svg");
+  content: url("/images/github-mark-white.svg");
 }
 
 .mail-icon {
-  content: url("/.netlify/images?url=/images/mail-white.svg");
+  content: url("/images/mail-white.svg");
 }
 
 .linked-in {
-  content: url("/.netlify/images?url=/images/li-in-white.png");
+  content: url("/images/li-in-white.png");
 }
 
 /* 404 */
@@ -280,7 +286,7 @@ footer {
 }
 
 .lost__body {
-  color: #5C5B77;
+  color: var(--text);
 }
 
 .lost__link {
@@ -327,15 +333,15 @@ html.light {
 }
 
 .light .git-icon {
-  content: url("/.netlify/images?url=/images/github-mark.svg");
+  content: url("/images/github-mark.svg");
 }
 
 .light .mail-icon {
-  content: url("/.netlify/images?url=/images/mail.svg");
+  content: url("/images/mail.svg");
 }
 
 .light .linked-in {
-  content: url("/.netlify/images?url=/images/li-in.png");
+  content: url("/images/li-in.png");
 }
 
 .light .badge__link {
