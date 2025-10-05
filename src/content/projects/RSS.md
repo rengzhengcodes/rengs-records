@@ -2,8 +2,8 @@
 title: '6.4200: Robotics Systems and Sciences'
 description: 'A redirect to my RSS project.'
 image:
-    url: ''
-    alt: ''
+    url: '/rss/wall_e.jfif'
+    alt: 'The Wall-E image defaulted to by RSS.'
 workImages:
     - { url: '/rss/RSS-Yolo.png', alt: 'YOLO Working.' }
 platform: RSS Robot
