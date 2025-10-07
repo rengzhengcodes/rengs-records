@@ -4,10 +4,15 @@ author: Reng Zheng
 date: '10-03-2025'
 image:
    url: '/fsae/perception/my25_right.png'
-   alt: 'Boston Q-Compute HPC Press Release Photo'
+   alt: 'MY25 right-side view. Courtesy of the 2025 MIT Motorsporst Website (and, if memory serves, Eric Zhou who drew it).'
 ---
+# Purpose
+The purpose of this document is to detail the design decisions motivating a perception testing trip's procedures and what those procedures are. Procedures after the first are similar to the ones before, with changes bolded for easier identification. The reason for this formatting is so it is easily referenceable on a testing trip without the need to scroll.
+
+If you're looking for *just the specific procedures*, go [here](/posts/perception-test-plans).
+
 # Background
-Bootstrapping an Autonomous Vehicle's Perception team is a hard task. For AMY25 at [MIT Motorsports](fsae.mit.edu) this means thinking about how you are going to collect training data after you've got your [sensors in order](./posts/network-syncing), with PTP (IEEE-1588) time-syncing.
+Bootstrapping an Autonomous Vehicle's Perception team is a hard task. For AMY25 at [MIT Motorsports](http://fsae.mit.edu) this means thinking about how you are going to collect training data after you've got your [sensors in order](./posts/network-syncing), with PTP (IEEE-1588) time-syncing.
 
 <div class="center">
    <video class="pro-img" controls preload="metadata" playsinline style="width:100%; height:auto;">
@@ -36,7 +41,7 @@ Your testing trip is only as good as the data you collect, so you better make da
 2. Ground-Truth Data Collection
    1. Even if your data is temporally synced, it is still not sufficient to be called a good testing trip. This is because the accuracy of your inference off the data collected *from the car* is unvalidatable without a ground truth. Therefore, you *must* ensure your ground truth is as accurate as [pragmatically] possible. because there is *no* other way to well-validate your model if you do not have this.
 3. Sensor Quality
-   1. The first component of this is how good your sensors are. The higher spatiotemporal resolution you hae on a sensor, the more accurate it is, and the more certainty we have that everything in the pipeline, from physical installation to data acquisition is done correctly, the better inferences you are able to make from the data, as it is more rich and more robust. Garbage-in Garbage-out as a corollary means your model is at least as garbage as how garbage your inputs are.
+   1. The first component of this is how good your sensors are. The higher spatiotemporal resolution you have on a sensor, the more accurate it is, and the more certainty we have that everything in the pipeline, from physical installation to data acquisition is done correctly, the better inferences you are able to make from the data, as it is more rich and more robust. Garbage-in Garbage-out as a corollary means your model is at least as garbage as how garbage your inputs are.
    2. The second component is how representative our sensors are to the actual conditions we are running in. If we run a sensor with a lens cap, that's an obvious failure, but a less obvious failure is a lens that is not screwed on tightly so the focal is wrong, or a lens with a dirt smear that is only seen later.
 
 Thus, *before* collecting any autonomous data, the following should be validated so as not to waste people's time:
